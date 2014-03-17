@@ -33,12 +33,12 @@ class Elements(object):
             elements_text.append(element.text)
         return elements_text
 
-    def get_elements_attributes(self, xpath, attribute):
+    def get_elements_attribute(self, xpath, attribute):
         """
-        Returns a list of elements attributes identified by xpath.\n
+        Returns a list of elements attribute identified by xpath.\n
         *Example usage:*
         | *Variable* | *Keyword* | *Argument* |
-        | @{attributes_values} | Get Elements Attributes | //table[@id='calendar']/tbody//td | class |
+        | @{attributes_values} | Get Elements Attribute | //table[@id='calendar']/tbody//td | class |
         *Example result:*\n
         INFO : @{attributes_values} = ['calendar-selected', 'calendar-today', 'calendar-day', ... 'calendar-disabled']
         """
@@ -86,8 +86,8 @@ class Elements(object):
 
     def wait_until_element_is_not_visible(self, xpath, timeout=5):
         """
-        Waits until element specified with locator is hiding.\n
-        Fails if _"timeout"_ expires before the element is hiding. Timeout is specified in seconds.\n
+        Waits until element specified with locator is hidden.\n
+        Fails if _"timeout"_ expires before the element is hidden. Timeout should be specified in seconds.\n
         *Example usage:*
         | *Keyword* | *Argument* | *Argument* |
         | Wait Until Element Is Not Visible | //div[@id='delete_confirm'] | 10 |
@@ -99,7 +99,7 @@ class Elements(object):
     def wait_until_page_not_contain_element(self, xpath, timeout=5):
         """
         Waits until element specified with locator disappears on current page.\n
-        Fails if _"timeout"_ expires before the element is disappears. Timeout is specified in seconds.\n
+        Fails if _"timeout"_ expires before the element disappears. Timeout should be specified in seconds.\n
         *Example usage:*
         | *Keyword* | *Argument* | *Argument* |
         | Wait Until Page Not Contain Element | //table[@id='staff']/tbody/tr[1] | 10 |

@@ -31,9 +31,9 @@ class Elements(object):
         """
         pass
 
-    def get_elements_attributes(self, xpath, attribute):
+    def get_elements_attribute(self, xpath, attribute):
         """
-        <p>Returns a list of elements attributes identified by xpath.</p>
+        <p>Returns a list of elements attribute identified by xpath.</p>
         <p><b>Example usage:</b></p>
         <table>
             <thead>
@@ -47,7 +47,7 @@ class Elements(object):
             <tbody>
                 <tr>
                     <td>@{attributes_values}</td>
-                    <td>Get Elements Attributes</td>
+                    <td>Get Elements Attribute</td>
                     <td>//table[@id='calendar']/tbody//td</td>
                     <td>class</td>
                 </tr>
@@ -115,7 +115,7 @@ class Elements(object):
     def wait_until_element_is_not_visible(self, xpath, timeout=5):
         """
         <p>Waits until element specified with locator is hiding.<br>
-        Fails if <i>"timeout"</i> expires before the element is hiding. Timeout is specified in seconds.</p>
+        Fails if <i>"timeout"</i> expires before the element is hidden. Timeout should be specified in seconds.</p>
         <p><b>Example usage:</b></p>
         <table>
             <thead>
@@ -139,7 +139,7 @@ class Elements(object):
     def wait_until_page_not_contain_element(self, xpath, timeout=5):
         """
         <p>Waits until element specified with locator disappears on current page.<br>
-        Fails if <i>"timeout"</i> expires before the element is disappears. Timeout is specified in seconds.</p>
+        Fails if <i>"timeout"</i> expires before the element disappears. Timeout should be specified in seconds.</p>
         <p><b>Example usage:</b></p>
         <table>
             <thead>
