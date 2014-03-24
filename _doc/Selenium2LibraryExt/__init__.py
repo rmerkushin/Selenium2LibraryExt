@@ -3,17 +3,17 @@
 # Copyright (c) 2014 Roman Merkushin
 # rmerkushin@ya.ru
 
+from driver import Driver
 from elements import Elements
+from table import Table
 
-__version__ = "v0.1.0"
+__version__ = "v0.1.1"
 
 
-class Selenium2LibraryExt(Elements):
+class Selenium2LibraryExt(Driver, Elements, Table):
 
     """
-    <p>The Robot Framework <a href="https://github.com/rmerkushin/Selenium2LibraryExt">Selenium2LibraryExt</a>
-    is a library which extends <a href="https://github.com/rtomac/robotframework-selenium2library/">Selenium2Library</a>
-    by some new keywords.</p>
+    The Robot Framework Selenium2LibraryExt is a library which extends Selenium2Library by some new keywords.
     """
 
     ROBOT_LIBRARY_SCOPE = "GLOBAL"

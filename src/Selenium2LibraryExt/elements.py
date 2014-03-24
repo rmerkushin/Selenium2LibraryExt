@@ -3,17 +3,11 @@
 # Copyright (c) 2014 Roman Merkushin
 # rmerkushin@ya.ru
 
-from robot.libraries.BuiltIn import BuiltIn
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException
 
 
 class Elements(object):
-
-    @property
-    def driver(self):
-        selenium2lib = BuiltIn().get_library_instance("Selenium2Library")
-        return selenium2lib._current_browser()
 
     def get_elements_text(self, xpath):
         """

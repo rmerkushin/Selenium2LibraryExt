@@ -4,4 +4,6 @@ VERSION.txt
 setup.py
 doc\Selenium2LibraryExt.html
 src\Selenium2LibraryExt\__init__.py
+src\Selenium2LibraryExt\driver.py
 src\Selenium2LibraryExt\elements.py
+src\Selenium2LibraryExt\table.py
