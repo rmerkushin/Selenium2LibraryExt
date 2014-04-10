@@ -112,6 +112,30 @@ class Elements(object):
         """
         pass
 
+    def wait_until_element_is_visible(self, xpath, timeout=5):
+        """
+        <p>Waits until element specified with locator is visible.<br>
+        Fails if <i>"timeout"</i> expires before the element is visible. Timeout should be specified in seconds.</p>
+        <p><b>Example usage:</b></p>
+        <table>
+            <thead>
+                <tr>
+                    <td><b>Keyword</b></td>
+                    <td><b>Argument</b></td>
+                    <td><b>Argument</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Wait Until Element Is Visible</td>
+                    <td>//div[@id='delete_confirm']</td>
+                    <td>10</td>
+                </tr>
+            </tbody>
+        </table>
+        """
+        pass
+
     def wait_until_element_is_not_visible(self, xpath, timeout=5):
         """
         <p>Waits until element specified with locator is hiding.<br>

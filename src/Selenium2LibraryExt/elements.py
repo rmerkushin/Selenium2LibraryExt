@@ -78,6 +78,18 @@ class Elements(object):
             elements_properties.append(element.value_of_css_property(property_name))
         return elements_properties
 
+    def wait_until_element_is_visible(self, xpath, timeout=5):
+        """
+        Waits until element specified with locator is visible.\n
+        Fails if _"timeout"_ expires before the element is visible. Timeout should be specified in seconds.\n
+        *Example usage:*
+        | *Keyword* | *Argument* | *Argument* |
+        | Wait Until Element Is Visible | //div[@id='delete_confirm'] | 10 |
+        """
+        wait = WebDriverWait(self.driver, timeout=int(timeout))
+        message = "Element '%s' was not visible in %s second(s)." % (xpath, str(timeout))
+        wait.until(lambda driver: driver.find_element_by_xpath(xpath).is_displayed(), message=message)
+
     def wait_until_element_is_not_visible(self, xpath, timeout=5):
         """
         Waits until element specified with locator is hidden.\n
