@@ -6,11 +6,12 @@
 from driver import Driver
 from elements import Elements
 from table import Table
+from additional import Additional
 
 __version__ = "v0.1.1"
 
 
-class Selenium2LibraryExt(Driver, Elements, Table):
+class Selenium2LibraryExt(Driver, Elements, Table, Additional):
 
     """
     The Robot Framework Selenium2LibraryExt is a library which extends Selenium2Library by some new keywords.
